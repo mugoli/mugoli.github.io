@@ -89,6 +89,29 @@
             padding-top: 1rem;
         }
 
+        .trigger {
+    border: 0;
+    padding: 0;
+    background: none;
+    font: inherit;
+    color: #000;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.trigger:hover {
+    color: #555;
+}
+
+.inline-text {
+    display: none;
+}
+
+.inline-text.visible {
+    display: inline;
+}
+
         @media (max-width: 800px) {
             .wrapper {
                 margin-left: auto;
@@ -101,6 +124,8 @@
         }
     </style>
 </head>
+
+
 <body>
 
 <div class="wrapper">
@@ -146,6 +171,11 @@ Thanks for stopping by. Reach out if you’d like to work.<br><br>
 </p>
 
 </div>
-
+<script>
+function toggle(button) {
+    const text = button.nextElementSibling;
+    text.classList.toggle('visible');
+}
+</script>
 </body>
 </html>
